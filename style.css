@@ -1,0 +1,768 @@
+
+
+/* Cabeça estilizada da página */
+#head {
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo dentro de #head */
+    justify-content: space-between;
+    padding: 0 10px; /* Espaçamento interno do contêiner #head */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
+}
+
+#logo {
+    width: 250px; /* Define a largura do contêiner do link */
+    height: 115px; /* Ajusta a altura do contêiner para coincidir com #head */
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    max-width: 100%; /* Limita a largura da imagem a 100% da largura do contêiner #logo */
+    max-height: 100%; /* Limita a altura da imagem a 100% da altura do contêiner #logo */
+    object-fit: contain; /* Garante que a imagem mantenha suas proporções */
+    margin-left: 15px;
+}
+
+
+/*MENU HAMBURGUE */
+#botaoMenuInicial {
+    width: 50px;
+    height: 50px;
+    background-color: #F78D11;
+    margin-right: 40px; /* Ajuste o valor conforme necessário */
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    padding: 0;
+    cursor:pointer;
+    border:none;
+    border-radius:5px;
+}
+
+.linhabotao {
+    width: 70%;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 4px 0; /* Espaçamento vertical entre as linhas */
+    border-radius: 10px;
+}
+
+.menu {
+    width:300px;
+    height:400px;
+    display: none; /* Esconde o menu inicialmente */
+    position: absolute;
+    top: 60px; /* Ajuste conforme necessário */
+    right: 25px; /* Ajuste conforme necessário */
+    background-color: #F78D11;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave para opacidade e transform */
+    transform: scaleY(0); /* Inicialmente encolhe verticalmente */
+    transform-origin: top; /* Define a origem da transformação */
+}
+
+.menu.show {
+    display: block;
+    opacity: 1; /* Torna o menu visível */
+    transform: scaleY(1); /* Expande verticalmente */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+
+.menu li {
+    margin: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    align-items:center;
+    font-weight:bold;
+    font-family:Comic Sans MS;
+}
+
+/* Término da cabeça estilizada da página */
+
+/* Começando o carrossel */
+#carrossel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+#carrossel img {
+    width: 100%; /* Ajuste a largura de cada imagem para ocupar 100% do contêiner */
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+.carrossel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#corpo {
+    height: auto;
+    margin-bottom: 50px; /* Adiciona espaço abaixo do corpo */
+}
+
+/*Arrumando o corpo*/
+
+.corpuscorpus {
+    display: flex;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+
+
+#informativo {
+    width: 100%;
+    height: 450px;
+    background-color: #Dc7908;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.FotosInformativos {
+    width: 23%;
+    height: 60%;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.FotosInformativos:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+
+.textoInfo {
+    color: black;
+    font-size: 20px;
+    font-family: Arial;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.fotoInformativo {
+    width: 100%;
+    height: 85%;
+    object-fit: cover; /* Garante que a imagem cubra toda a área da div, mantendo a proporção */
+    border-radius: 5px;
+}
+
+
+
+/*Fazendo texto das áreas*/
+.TextoDeCadaCorpo {
+    text-align: center;
+    font-family: Helvetica;
+    width: 100%;
+    margin-bottom:20px;
+    margin-top:20px;
+    
+}
+
+/*DEPOIS VER COMO VAI FICAR A COR DO BOTÃO*/
+.OutrosEventosBtn{
+    background-color:  #f7f7f7;
+    border-radius: 100px;
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: bold;
+    color: #F78D11;
+    width:280px;
+    height: 50px;
+    border: 5px solid black;
+    margin:47px;
+    cursor:pointer;
+    transition: transform 0.3s ease;
+}
+
+.OutrosEventosBtn:hover {
+    transform: scale(1.1); /* Aumenta o tamanho para 110% */
+}
+
+#noticias {
+    width: 100%;
+    height: 450px;
+    background-color: #Dc7908;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.FotosNoticias{
+    width: 23%;
+    height: 60%;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.FotosNoticias:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+
+.fotoNoticia{
+    width: 100%;
+    height: 85%;
+    object-fit: cover; /* Garante que a imagem cubra toda a área da div, mantendo a proporção */
+    border-radius: 5px;
+}
+
+#textoSobreONG{
+    width:50%;
+    height:75px;
+    text-align: center;
+    font-family: helvetica;
+}
+
+#textoSobreNos{
+    width:100%;
+    height:50px;
+}
+
+/*Blocos das imagens representativas*/
+#imagensRepresentativas{
+    display: flex;
+    flex-direction: row; /* Empilha os itens horizontalmente */
+    /*justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.representativaImagem{
+
+    width:20%;
+    height:70px;
+    background-color: gray
+}
+
+
+/* KAMILLY */
+
+.card {
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 20px;
+	margin: 20px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.card h2 {
+    font-family: helvetica;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.card p {
+    font-family: helvetica;
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.card img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.card button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+}
+
+.secao4 {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+.secao4-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    gap: 20px; /* Espaçamento entre os cartões */
+}
+
+.secao4-div-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(25% - 40px); /* Largura ajustada */
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: white;
+    transition: all 0.5s ease;
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    flex-grow: 1; /* Faz com que os cartões cresçam igualmente */
+    min-height: 300px; /* Altura mínima para garantir consistência */
+}
+
+.secao4-div-card:hover {
+    transform: scale(1.05); /* Reduzido o scale para evitar overlap */
+    z-index: 1;
+}
+
+.secao4-div-card img {
+    width: 50px; /* Tamanho fixo para a largura da imagem */
+    height: auto;
+    margin-bottom: 20px; /* Adiciona um espaço abaixo da imagem */
+}
+
+.secao4-div-card h3 {
+    margin: 0; /* Remove margem para garantir consistência */
+    font-size: 24px; /* Tamanho de fonte consistente */
+    margin-bottom: 10px; /* Espaçamento abaixo do h3 */
+}
+
+.secao4-div-card p {
+    margin: 0; /* Remove margem para garantir consistência */
+    font-size: 18px; /* Tamanho de fonte consistente */
+    line-height: 1.5; /* Altura da linha para garantir legibilidade */
+    margin-top: 10px; /* Espaçamento acima do p */
+}
+
+/* Estilos específicos para o segundo card */
+.secao4-div-card:nth-child(2) h3,
+.secao4-div-card:nth-child(2) p {
+    margin-top: 20px; /* Adiciona um espaço acima do texto para descer */
+}
+
+@media (max-width: 768px) {
+    .secao4-div-card {
+        width: 100%;
+    }
+}
+
+
+
+/* FEEDBACKS */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+
+.feedback-section {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #Dc7908;
+}
+
+.feedback-container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 40px 0px;
+}
+
+.title h2 {
+  font-size: 50px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.title .underline {
+  width: 100px;
+  height: 4px;
+  background-color: #177a29;
+  margin: 0 auto;
+}
+
+.review {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: grey;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: "Open Sans", sans-serif;
+  border-radius: 12px;
+}
+
+#person-img {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
+}
+
+#author {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-top: 10px;
+  color:#FFFB7D
+}
+
+#job {
+  text-transform: uppercase;
+  line-height: 150%;
+  margin-bottom: 10px;
+  color: #85FFBD;
+}
+
+#info {
+  height: 100px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn {
+  text-decoration: none;
+  border-style: none;
+  font-size: 30px;
+  margin: 0 10px;
+  color: #Dc7908;
+  cursor: pointer;
+  background-color:grey;
+}
+
+
+
+
+
+
+
+
+/* CARROSSEL DE PARCEIROS */
+
+
+#parceiro {
+	align-items: center;
+	background: #E3E3E3;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+}
+
+/* Mixin para gradiente branco */
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7)); }
+}
+
+/* Estilos do carrossel */
+.slider {
+	background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 100px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	width: 960px;
+}
+
+/* Gradiente nos lados do carrossel */
+.slider::before,
+.slider::after {
+	@include white-gradient;
+	content: "";
+	height: 100px;
+	position: absolute;
+	width: 200px;
+	z-index: 2;
+}
+
+/* Gradiente no lado direito */
+.slider::after {
+	right: 0;
+	top: 0;
+	transform: rotateZ(180deg);
+}
+
+/* Gradiente no lado esquerdo */
+.slider::before {
+	left: 0;
+	top: 0;
+}
+
+/* Animação do carrossel */
+.slide-track {
+	animation-name: scroll;
+	animation-duration: 40s; /* Definindo a duração da animação */
+	animation-timing-function: linear; /* Definindo a função de temporização da animação */
+	animation-iteration-count: infinite; /* Fazendo a animação repetir infinitamente */
+	display: flex;
+	width: calc(250px * 14);
+}
+
+/* Estilos dos slides */
+.slide {
+	height: 100px;
+	width: 250px;
+}
+
+
+/*recordações*/
+
+#Recordacoes{
+    width:100%;
+    height: 650px;
+    background-color: #177a29;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#OrganizacaoDasFotos{
+    width:90%;
+    height:90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #85FFBD;
+    margin-top: 20px;
+}
+
+
+
+#QuadranteSuperior {
+    width: 100%;
+    height: 50%;
+    background-color: #FFFB7D;
+    display: flex;
+    justify-content: space-between; /* Distribui o espaço uniformemente entre as imagens */
+    align-items: center; /* Centraliza as imagens verticalmente dentro do container */
+    padding: 10px; /* Adiciona padding para um espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura total do elemento */
+}
+
+
+
+#QuadranteInferior{
+    width: 100%;
+    height: 50%;
+    background-color: #FFFB7D;
+    display: flex;
+    justify-content: space-between; /* Distribui o espaço uniformemente entre as imagens */
+    align-items: center; /* Centraliza as imagens verticalmente dentro do container */
+    padding: 10px; /* Adiciona padding para um espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura total do elemento */
+}
+
+.fotosRecordacoes {
+    flex: 1; /* Garante que as imagens compartilhem o espaço disponível de maneira uniforme */
+    height: 80%;
+    max-width: 25%; /* Garante que a largura máxima não exceda 25% do container */
+    margin: 0 70px; /* Define a margem entre as imagens */
+    object-fit: cover; /* Garante que a imagem cubra a área do seu container sem distorcer */
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Adiciona uma transição suave para a transformação e para a sombra */
+    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.5); /* Adiciona sombra de fundo às imagens */
+}
+
+.fotosRecordacoes:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem em 10% ao passar o mouse sobre ela */
+    box-shadow: 4px 4px 24px 0px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse sobre a imagem */
+}
+
+
+/*FOOTER*/
+
+
+#divisao {
+    background-color: orange;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+#footer {
+    display: flex;
+    align-items: flex-start; /* Alinhar os itens ao topo */
+    justify-content: center;
+    gap: 50px;
+}
+
+.retangulo {
+    width: 500px;
+    background-color: #FFA500;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-bottom: 50px;
+    padding-right: 5px;
+}
+
+.retangulo h1 {
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 26pt;
+    margin-bottom: 20px;
+}
+label {
+    color: white;
+    font-family: Arial;
+    font-size: 13pt;
+}
+#icons{
+    position:absolute;
+    left:427px;
+    bottom:-3480px;
+    text-align:center;
+}
+#icons i {
+    font-size: 24px;
+    color: white;
+    margin: 0 30px;
+    transition:color 0.5s;
+}
+#icons #face:hover{
+    color:#4267B2;
+}
+#icons #you:hover{
+    color:#FF0000;
+}
+#icons #insta:hover{
+    color:#E1306C;
+}
+.inputs {
+    width: calc(100% - 22px);
+    border: 1px solid rgb(223, 171, 74);
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#mensg {
+    width: calc(100% - 22px);
+    height: 130px;
+    resize: none;
+    border: 1px solid rgb(223, 171, 74);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+#btnInfo,
+#btnContato {
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+    font-size: 16pt;
+    color: rgb(248, 171, 4);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btnInfo:hover,
+#btnContato:hover {
+    background-color: #ff7300;
+    color: white;
+}
+
+.success-message {
+    color: green;
+    font-size: 12px;
+    display: none;  
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.smooth-scroll {
+    cursor: pointer;
+}
+
+
+
+
+
+

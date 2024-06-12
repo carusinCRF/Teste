@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sempre Criança</title>
+    <link rel="stylesheet" href="styleDoacao.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/5785106774.js" crossorigin="anonymous"></script>
+    <div id="head">
+        <a id="logo" href="index.html">
+            <img src="logo2.png" alt="Logo">
+        </a>
+        <button id="botaoMenuInicial">
+            <div class="linhabotao"></div>
+            <div class="linhabotao"></div>
+            <div class="linhabotao"></div>
+        </button>
+    </div>
+    
+    <div id="menu" class="menu">
+        <ul>
+            <li><a href="index.html">Página inicial</a></li>
+            <li><a href="quemSomos.html">Quem somos</a></li>
+            <li><a href="instituicoes.html">Instituições</a></li>
+            <li><a href="doacao.html">Doações</a></li>
+            <li><a href="sejaVoluntario.html">Seja voluntário</a></li>
+            <li><a href="parceria.html">Parceria</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="VerMaisFotos.html">Fotos</a></li>
+            <li><a href="#footer" class="smooth-scroll">Contato</a></li>
+        </ul>
+    </div>
+
+    <div id="CorpoDasDoacoes">
+        <p id="TextoDoacao">Doação</p>
+        <div id="CorpoTipoDoacoes">
+            <div class="tipoDoacao" id="tipo1">
+                <img class="fotoTipoDocao" src="/FotosDoacao/DoacaoRoupa.png"/>
+                <p class="textoDentroDoTipoDeDoacao">ROUPAS</p>
+            </div>
+
+            <div class="tipoDoacao" id="tipo2">
+                <img class="fotoTipoDocao" src="/FotosDoacao/doacaoDinheiro.png">
+                <p class="textoDentroDoTipoDeDoacao">DINHEIRO</p>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal para tipo1 -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Local para doação de roupas</h2>
+        <p>As doações são aceitas somente no local de coleta</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1837.6541772318858!2d-43.10042337010325!3d-22.90199473046512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9983f7b7a41897%3A0x9dd4fe2959dd45a8!2sSempre%20Crian%C3%A7a%20-%20ponto%20de%20encontro!5e0!3m2!1spt-BR!2sbr!4v1717716518505!5m2!1spt-BR!2sbr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+<!-- Modal para tipo2 -->
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações sobre Doação de Dinheiro</h2>
+    </div>
+</div>
+
+
+    <script src="scriptDoacao.js"></script>
+
+    <div id="divisao"></div>
+    <div id="footer">
+        <div class="retangulo">
+            <h1>Receba nosso informativo</h1>
+            <p>
+                <label>Email:
+                    <input type='text' name="emailInfo" class='inputs' id="emailInfo"/>
+                </label>
+            </p>
+            <span class="error-message" id="emailInfoError"></span>
+            <button id="btnInfo">Enviar</button>
+            <span class="success-message" id="infoSuccessMessage"></span>
+        </div>
+        <div class="retangulo" id="icons">
+            <a href="#"><i id="face" class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i id="you" class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i id="insta" class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="retangulo">
+            <h1>Entre em contato conosco</h1>
+            <p>
+                <label>Nome:
+                    <input type='text' name="nomeCont" class='inputs' id="nomeCont"/>
+                </label>
+            </p>
+            <span class="error-message" id="nomeContError"></span>
+            <p>
+                <label>Email:
+                    <input type='text' name="emailCont" class='inputs' id="emailCont"/>
+                </label>
+            </p>
+            <span class="error-message" id="emailContError"></span>
+            <p>
+                <label>Telefone:
+                    <input type='text' name="telCont" class='inputs' id="telCont"/>
+                </label>
+            </p>
+            <span class="error-message" id="telContError"></span>
+            <p>
+                <label>Assunto:
+                    <input type='text' name="assuntoCont" class='inputs' id="assuntoCont"/>
+                </label>
+            </p>
+            <span class="error-message" id="assuntoContError"></span>
+            <p>
+                <label>Mensagem:
+                    <textarea name="mensCont" class="inputs" id="mensg"></textarea>
+                </label>
+            </p>
+            <span class="error-message" id="mensgError"></span>
+            <button id="btnContato">Enviar</button>
+            <span class="success-message" id="contatoSuccessMessage"></span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    </body>
+    </html>
